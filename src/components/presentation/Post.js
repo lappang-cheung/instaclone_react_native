@@ -26,7 +26,11 @@ class Post extends Component {
 
     render() {
 
-        const imageURI = "https://lh3.googleusercontent.com/B0yejmZNJ6g5eRqB77sjSXjhGRtSEw8jXbfYM9WCC8vQ7tvnj4XDbiQ62sq7qQueQ9cyFYsePrT_mKaGo0-EuDOM" 
+        const imageSelection = (this.props.item%2===0) 
+        ? "https://lh3.googleusercontent.com/NmQcCxahFklQe5H7f6QHPLLJH6ondc4jo4BuyRFTOe5cE6IxCBp-1uCjUdLLBjzw16aWr__dVJes2ludcyRjyCA9" 
+        : "https://lh3.googleusercontent.com/HealBFNW0MnijA19mXqEhtXe05rxLAxhmIhFf6uq19Hg-pLklEhEXc7B1gMxpufKjGt_y1rgZ4VH4ydYpkTtbtxH"
+
+        const imageURI = imageSelection 
         + "=s" + this.state.screenWidth + "-c";
 
         const heartIconColour = this.state.liked ? "rgb(252, 61, 57)" : null;

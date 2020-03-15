@@ -4,8 +4,8 @@ import {Post} from '../presentation';
 
 class PostFeed extends Component {
 
-    _renderPost = () => {
-        return <Post />
+    _renderPost = ({item}) => {
+        return <Post item={item} />
     }
 
     _returnKey = (item) => {
