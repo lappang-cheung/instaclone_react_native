@@ -57,3 +57,7 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+#npm vs yarn
+yarn.lock
+package.json-lock
