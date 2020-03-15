@@ -10,7 +10,7 @@ class Login extends Component {
 
     login = () => {
         // Navigate next page
-        this.props.navigation.navigate("main")
+        this.props.navigation.navigate('MainFeed')
     }
 
     render() {

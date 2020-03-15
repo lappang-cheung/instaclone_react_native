@@ -14,9 +14,9 @@ class InstaClone extends Component {
 
         return (
             <View style={InstaCloneStyles.container}>
-                <View style={InstaCloneStyles.header}>
+                {/* <View style={InstaCloneStyles.header}>
                     <Text>Instagram</Text>
-                </View>
+                </View> */}
                 <PostFeed />
             </View>
         );

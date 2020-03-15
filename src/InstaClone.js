@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 
-import {MainFeed, Login} from './components/screens';
-import {createSwitchNavigator, createAppContainer} from 'react-navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-const MainStack = createSwitchNavigator({
-    login: {screen: Login},
-    main: {screen: MainFeed}
-});
+import {MainFeed, Login, Camera, Profile} from './components/screens';
 
-const AppContainer = createAppContainer(MainStack);
+const Stack = createStackNavigator()
+
 
 class InstaClone extends Component {
+
     render() {
-        return <AppContainer />
+        return (
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen name="Login" component={Login} />
+                    <Stack.Screen name="MainFeed" component={MainFeed} />
+                </Stack.Navigator>
+            </NavigationContainer>
+        )
     }
 }
 
-export default (InstaClone);
+export default InstaClone;
